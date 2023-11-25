@@ -1,10 +1,13 @@
 # DockerizedDotNetBuilder
+
 Research for a docker based build of a .Net application
 
 ## Beschreibung
-Das DockerizedDotNetBuilder-Projekt zielt darauf ab, eine .NET 6-Anwendung innerhalb eines Docker-Containers zu bauen und das Ergebnis als ZIP-Datei außerhalb des Containers bereitzustellen. 
+
+Das DockerizedDotNetBuilder-Projekt zielt darauf ab, eine .NET 6-Anwendung innerhalb eines Docker-Containers zu bauen und das Ergebnis als ZIP-Datei außerhalb des Containers bereitzustellen.
 
 ## Voraussetzungen
+
 - Docker
 
 ## Ablauf
@@ -18,4 +21,13 @@ Das DockerizedDotNetBuilder-Projekt zielt darauf ab, eine .NET 6-Anwendung inner
 7. Ansonsten wird ein Powershell-Skript gestartet, dass die "Artefakte" einsammelt und außerhalb des Docker containers als Zip ablegt, inkl. Build log und sich dann beendet
 
 ## Experiment
+
 - Kann der docker-Container unter Linux laufen und dennoch für Windows übersetzen?
+
+## Useful Commands
+
+### This will clean and remove all existing Docker containers and images
+
+```
+docker system prune -a
+```
