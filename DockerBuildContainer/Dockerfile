@@ -1,5 +1,5 @@
 # Verwenden des offiziellen Microsoft .NET 6 SDK Images
-FROM mcr.microsoft.com/dotnet/sdk:6.0
+FROM mcr.microsoft.com/dotnet/sdk:7.0
 
 # Setzen des Arbeitsverzeichnisses im Container
 WORKDIR /app

@@ -1,6 +1,6 @@
 # Überprüfen, ob eine Git-URL angegeben wurde
 param(
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string]$GitUrl
 )
 
@@ -10,5 +10,14 @@ git clone $GitUrl repo
 # Wechselt in das Repository-Verzeichnis
 Set-Location repo
 
-# Führt dotnet build aus
-dotnet build
+
+$slnFiles = Get-ChildItem -Filter *.sln -Recurse
+
+# Iterate through each .sln file and execute dotnet build
+foreach ($slnFile in $slnFiles) {
+    $slnPath = $slnFile.FullName
+    Write-Host "Building $slnPath..."
+    # Execute dotnet build for the current .sln file
+    dotnet build $slnPath
+}
+

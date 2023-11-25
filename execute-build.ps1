@@ -1,1 +1,1 @@
-docker run mein-dotnet-build-container IhreGitUrl
+docker run mein-dotnet-build-container https://github.com/CleverCodeCravers/VisualPairCoding
